@@ -4,8 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pac-man</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
+      integrity="INTEGRITY_STRING"
+      crossorigin="anonymous"/>
 </head>
+<style>
+    #border{
+        border: 20px solid #4834d4;
+        border-radius: 20px;
+    }
+
+    #border1{
+        display: inline-block;
+        border: 2px solid #4834d4;
+        height: 150px;
+        width: 100px;
+        background-color: #4834d4;
+        border: 2px solid green;
+    }
+
+    #border2{
+        display: inline-block;
+        border: 2px solid #4834d4;
+        height: 150px;
+        width: 100px;
+        background-color: #4834d4;
+        border: 2px solid green;
+    }
+
+    #border3{
+        display: inline-block;
+        border: 2px solid #4834d4;
+        height: 100px;
+        width: 150px;
+        background-color: #4834d4;
+        border: 2px solid green;
+    }
+
+    body{
+        background-color:#ffbe76;
+    }
+
+    .b1{
+        margin-top: 300px;
+        margin-left: 300px;
+        margin-bottom: 200px;
+    }
+    #ball{
+        display: inline-block;
+        border: 2px solid green;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+
+</style>
 <body>
-    
-</body>
+    <div id="border" >
+
+        <div id="border1" class="b1">
+            
+        </div>
+
+        <div id="border3" class="b1">
+
+        </div>
+
+        <div id="border2" class="b1">
+
+        </div>
+
+        <div id="ball">
+            <i  class="fa-duotone fa-volleyball fa-spin fa-2xl" style="--fa-secondary-color: #870dc9; --fa-secondary-opacity: 4.4;"></i>
+        </div>
+        </div>
+
+        <script src="front_page.js"></script>
+    </body>
+
+
 </html>
