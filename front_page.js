@@ -33,6 +33,7 @@ document.addEventListener("keypress" , function(event)
     if(row<=0)
     {
         row=0;
+        tb = tb + 20;
         return;
     }
 
@@ -121,4 +122,4 @@ document.addEventListener("keypress" , function(event)
 });
 // only use left and top position 
 // we cannot use right and bottom position it cannot work like left and right
-// so i use left and top 
+// so i use left and top
