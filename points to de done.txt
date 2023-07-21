@@ -2,3 +2,6 @@ points to be done :
 1 ----------------done
 2 ----------------done
 3-----------------done
+
+top: 33px;
+ left: 30px;
