@@ -9,48 +9,48 @@ document.addEventListener("keypress" , function(event)
 {
  if(event.key == "w")
  {
-    tb = tb - 5;
+    tb = tb - 7;
     if(tb>topb)
     {
         r.style.top = tb+"px";
     }
     else{
-        tb = tb + 5;
+        tb = tb + 7;
     }
  }
  else if(event.key == "s")
  {
-    tb = tb + 5;
+    tb = tb + 7;
     if(tb<bot)
     {
         r.style.top = tb+"px";
     }
     else{
-        tb = tb - 5;
+        tb = tb - 7;
     }
     
  }
  else if(event.key == "a")
  {
-    lr = lr - 5;
+    lr = lr - 7;
     if(lr>left)
     {
         r.style.left = lr +"px";
     }
     else{
-        lr = lr + 5;
+        lr = lr + 7;
     }
  }
  else if(event.key == "d")
 {
-    lr = lr + 5;
+    lr = lr + 7;
 
     if(lr<rig)
     {
         r.style.left = lr +"px";
     }
     else{
-        lr = lr - 5;
+        lr = lr - 7;
     }
 }
 });
