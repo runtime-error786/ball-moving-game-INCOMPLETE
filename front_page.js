@@ -42,8 +42,8 @@ let dim = [
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 ];
 
-
-
+const au1 = document.getElementById("touch");
+const au = document.getElementById("walk");
   
 document.addEventListener("keypress" , function(event)
 {
@@ -56,6 +56,8 @@ document.addEventListener("keypress" , function(event)
 
     if(row<=0)
     {
+        au.pause(); 
+        au1.play();
         row=0;
         tb = tb + 20;
         return;
@@ -64,13 +66,16 @@ document.addEventListener("keypress" , function(event)
     
     if(dim[row-1][col]==0)
     {
+        au.pause(); 
+
+        au1.play();
+
        tb = tb + 20;
        return;
     }
 
         if(tb>=topb && dim[row-1][col]==1)
         {
-            const au = document.getElementById("walk");
             au.play();
             r.style.top = tb+"px";
             row--;
@@ -79,6 +84,10 @@ document.addEventListener("keypress" , function(event)
         }
         else{
             tb = tb + 20;
+            au.pause(); 
+
+            au1.play();
+
         }
  }
  else if(event.key == "s")
@@ -86,7 +95,11 @@ document.addEventListener("keypress" , function(event)
     tb = tb + 20;
     
     if(row>=31)
-    {
+    {        
+        au.pause(); 
+
+        au1.play();
+
         tb = tb - 20;
         row=31;
         return;
@@ -94,6 +107,10 @@ document.addEventListener("keypress" , function(event)
 
     if(dim[row+1][col]==0)
     {
+        au.pause(); 
+
+        au1.play();
+
        tb = tb - 20;
        return;
     }
@@ -101,7 +118,6 @@ document.addEventListener("keypress" , function(event)
 
     if(tb<=bot && dim[row][col]==1)
     {
-        const au = document.getElementById("walk");
         au.play();
         console.log("why work" , row);
         r.style.top = tb+"px";
@@ -111,6 +127,10 @@ document.addEventListener("keypress" , function(event)
     }
     else{
         tb = tb - 20;
+        au.pause(); 
+
+        au1.play();
+
     }
     
  }
@@ -121,18 +141,26 @@ document.addEventListener("keypress" , function(event)
     
     if(dim[row][col-1]==0)
     {
+        au.pause(); 
+
+        au1.play();
+
         lr = lr + 20;
         return;
     }
     if(lr>=left && dim[row][col]==1)
     {
-        const au = document.getElementById("walk");
-        au.play();
+       
         r.style.left = lr +"px";
         col--;
+        au.play();
     }
     else{
         lr = lr + 20;
+        au.pause(); 
+
+        au1.play();
+
     }
  }
  else if(event.key == "d")
@@ -142,16 +170,23 @@ document.addEventListener("keypress" , function(event)
     {
         lr = lr - 20;
         console.log("hello from 71");
+        au.pause(); 
+
+        au1.play();
+
         return;
     }
     if(dim[row][col+1]==0)
     {
         lr = lr - 20;
+        au.pause(); 
+
+        au1.play();
+
         return;
     }
     if(lr<=rig && dim[row][col]==1)
     {
-        const au = document.getElementById("walk");
         au.play();
         console.log("start");
         r.style.left = lr +"px";
@@ -161,6 +196,10 @@ document.addEventListener("keypress" , function(event)
     }
     else{
         lr = lr - 20;
+        au.pause(); 
+
+        au1.play();
+
     }
 }
 });
