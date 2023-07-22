@@ -42,10 +42,15 @@ let dim = [
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 ];
 
+
+
+  
 document.addEventListener("keypress" , function(event)
 {
+    
  if(event.key == "w")
  {
+    
     console.log("hello w");
     tb = tb - 20;
 
@@ -65,6 +70,8 @@ document.addEventListener("keypress" , function(event)
 
         if(tb>=topb && dim[row-1][col]==1)
         {
+            const au = document.getElementById("walk");
+            au.play();
             r.style.top = tb+"px";
             row--;
             console.log("hello " , col ,"j", row );
@@ -94,6 +101,8 @@ document.addEventListener("keypress" , function(event)
 
     if(tb<=bot && dim[row][col]==1)
     {
+        const au = document.getElementById("walk");
+        au.play();
         console.log("why work" , row);
         r.style.top = tb+"px";
         row = row + 1;
@@ -117,6 +126,8 @@ document.addEventListener("keypress" , function(event)
     }
     if(lr>=left && dim[row][col]==1)
     {
+        const au = document.getElementById("walk");
+        au.play();
         r.style.left = lr +"px";
         col--;
     }
@@ -140,6 +151,8 @@ document.addEventListener("keypress" , function(event)
     }
     if(lr<=rig && dim[row][col]==1)
     {
+        const au = document.getElementById("walk");
+        au.play();
         console.log("start");
         r.style.left = lr +"px";
         col = col + 1;
